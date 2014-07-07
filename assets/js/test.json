@@ -1,0 +1,18 @@
+var props = {
+    gradient: {
+        "repeat": {
+            "firefox": "doesn't work repeat:reflect",
+            "safari": "doesn't work repeat:reflect and repeat:repeat"
+        }
+    },
+    "animation": {
+        "css-animation": {
+            "firefox": "doesn't work inside use",
+            "safari": "sometext"
+        },
+        "SMIL-animation": {
+            "ie8": "doesn't work inside use",
+            "ie7": "sometext"
+        }
+    }
+};

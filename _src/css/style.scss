@@ -1,0 +1,259 @@
+@import '_mixins';
+@import '_fonts';
+
+.pos-abs {
+    @include posabs;
+    margin: auto;
+    }
+/* SVG
+------------------------- */
+
+svg {
+    vertical-align: top;
+    overflow: visible;
+    }
+    .svg--ovh {
+        overflow: hidden;
+        }
+
+use {
+    transition: .5s;
+    /* breaks fill - why? */
+    }
+
+.hidden-svg-defs {
+    position: absolute;
+    overflow: hidden;
+    }
+    .svg-defs {
+        @include posabs;
+        svg {
+            @include posabs;
+            }
+        }
+
+/* Slides
+------------------------- */
+
+.slide {
+    &>DIV {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: auto;
+        height: auto;
+        padding: 60px 80px;
+        }
+    &:after {
+        right: 1em;
+        bottom: 1em;
+        }
+        .full &:after {
+            left: auto;
+            }
+    }
+
+.slide--imgcenter {
+    & > DIV {
+    padding: 0;
+    text-align: center;
+    &:before {
+        content: "";
+        display: inline-block;
+        height: 640px;
+        vertical-align: middle;
+        }
+    }
+    IMG {
+        vertical-align: middle;
+    }
+}
+.slide--vlm {
+   & > DIV:before {
+        content: "";
+        display: inline-block;
+        height: 440px;
+        vertical-align: middle;
+        background: gold;
+        }
+    svg, span {
+        display: inline-block;
+        vertical-align: middle;
+        }
+    }
+
+.table-cell {
+    display: table-cell;
+    width: 864px;
+    height: 440px;
+    vertical-align: middle;
+    text-align: center;
+    svg, span {
+        display: inline-block;
+        vertical-align: middle;
+        margin: .5em 0;
+        }
+    }
+
+.slide--heart {
+    .table-cell {
+        font: 5.5em/1 'Ubuntu Condensed', sans-serif;
+    }
+    svg {
+        margin: 0 .1em;
+        vertical-align: middle;
+        }
+  }
+
+.slide--horcenter {
+    text-align: center;
+    }
+
+.slide--gradients-bugs IMG:first-of-type {
+    margin-right: 55px;
+    }
+
+.slide--about H3 SPAN {
+    display: block;
+    margin-top: .3em;
+    font-size: .6em;
+    color: #777;
+    }
+
+PRE {
+    position: relative;
+    &:before {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 0 15px;
+        border-radius: 10px;
+    }
+}
+
+$css-code-color: hsl(75, 70%, 70%); /*hsl(50, 80%, 75%)*/
+$svg-code-color: hsl(190, 70%, 75%);
+
+.pre--css {
+    &:before {
+        content: "CSS";
+        background: $css-code-color;
+    }
+}
+.pre--svg {
+    &:before {
+        content: "SVG";
+        background: $svg-code-color;
+    }
+}
+
+/* Cover
+------------------------- */
+
+#Cover {
+    text-align: center;
+    }
+  #Cover h2 {
+    margin: 40px 0 0;
+    color: #FFF;
+    text-align: center;
+    font-size: 70px;
+    }
+  #Cover SPAN {
+    display: block;
+    margin: 10px 0 0;
+    text-align: center;
+    color: #FFF;
+    font-size: 200px;
+    line-height: 2;
+    }
+    #Cover p a {
+      color:#FFF;
+      }
+    .slide.cover svg {
+        position: relative;
+        }
+    #cover-text {
+        margin-top: 70px;
+        width: 100%;
+        height: 290px;
+        font-family: 'Arial Black';
+        font-size: 15.5em;
+        letter-spacing: -0.05em;
+        }
+
+/* Popup
+------------------------- */
+
+.img-preview {
+    display: inline-block;
+    width: 24px;
+    height: 22px;
+    text-indent: 0;
+    vertical-align: middle;
+    }
+.popup {
+    @include posabs;
+    margin: auto;
+    border: 35px solid #FFF;
+    box-shadow: 0 0 80px rgba(0,0,0,.3),
+                0 0 50px 300px rgba(0,0,0,.3),
+                0 0 50px 300px rgba(255,255,255,.5);
+    text-indent: 0;
+    cursor: pointer;
+
+    &:before {
+            content: "\2573";
+            position: absolute;
+            display: block;
+            right: -2.1em;
+            top: -2.1em;
+            width: 1.5em;
+            height: 1.5em;
+            background: #444;
+            border: .2em solid #FFF;
+            border-radius: 50%;
+            box-shadow: 0 0 .3em rgba(0,0,0,.2);
+            text-align: center;
+            line-height: 1.5;
+            font-size: 1em;
+            color: #FFF;
+            }
+    }
+
+/* Backgrounds
+------------------------- */
+
+.bg--dark {
+    background: #000;
+    H2 {
+        color: #FFF;
+        }
+    }
+.bg--dark-gray {
+    background: #555;
+    H2 {
+        color: #FFF;
+        }
+    }
+
+/* Columns
+------------------------- */
+
+.column {
+    width: 49%;
+    &--left {
+        float: left;
+        }
+    &--right {
+        float: right;
+        }
+    }
+
+.photo {
+    float: left;
+    width: 300px;
+    height: 300px;
+    margin-right: 2.5em;
+    }
