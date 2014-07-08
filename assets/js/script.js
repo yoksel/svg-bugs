@@ -3,21 +3,13 @@ function list() {
     var listElem = doc.querySelector(".props-list");
     var templateClassName = "template--list-item";
 
-
-
     this.print = function() {
         var template = doc.querySelector("#template--list");
-        var listElem = doc.querySelector(".props-list");
         var output = Mustache.render(template.innerHTML, items);
 
-        out(output);
         listElem.innerHTML = output;
     }
-
 }
-
-
-
 
 //  Common
 // ----------------------------------
@@ -28,7 +20,6 @@ function out(str) {
 }
 
 var list = new list();
-
 list.print();
 
 // ----------------------------------

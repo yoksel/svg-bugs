@@ -226,6 +226,18 @@
   margin: auto;
 }
 
+CODE {
+  display: inline-block;
+  padding: 0 3px;
+  background: palegoldenrod;
+  border-radius: 4px;
+  text-shadow: 1px 1px white;
+  font-family: Consolas, Monaco, Lucida Console, monospace;
+  font-size: 12px;
+  line-height: 1.6;
+  color: darkred;
+}
+
 .l-wrapper {
   position: relative;
   min-width: 400px;
@@ -242,6 +254,7 @@
 
 .prop-name {
   margin-bottom: 2em;
+  padding: 0.2em 0;
   background: #DDD;
   text-align: center;
   font-weight: bold;
