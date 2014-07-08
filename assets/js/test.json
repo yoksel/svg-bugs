@@ -1,18 +1,70 @@
-var props = {
-    gradient: {
-        "repeat": {
-            "firefox": "doesn't work repeat:reflect",
-            "safari": "doesn't work repeat:reflect and repeat:repeat"
-        }
-    },
-    "animation": {
-        "css-animation": {
-            "firefox": "doesn't work inside use",
-            "safari": "sometext"
-        },
-        "SMIL-animation": {
-            "ie8": "doesn't work inside use",
-            "ie7": "sometext"
-        }
-    }
+var items = {
+    "props":[
+        {"prop-name" : "gradients",
+          "browsers": [
+                {"browser-name":
+                        "Firefox",
+                  "bug-desc":
+                        "не работает <code>spreadMethod: reflect</code>"},
+                {"browser-name":
+                        "Safari",
+                  "bug-desc":
+                        "не работает <code>spreadMethod: reflect</code> и <code>spreadMethod: repeat</code>"}
+            ]
+          },
+        {"prop-name" : "animation",
+          "browsers": [
+                {"browser-name":
+                        "IE9-11",
+                  "bug-desc":
+                        "не поддерживается SMIL и CSS-анимация для SVG-элементов"},
+                {"browser-name":
+                        "firefox",
+                  "bug-desc":
+                        "не работает анимация в переиспользуемх элементах"}
+                ]
+          },
+          {"prop-name" : "filters",
+              "browsers": [
+                {"browser-name": "IE9",
+                  "bug-desc": "фильтры не работают"},
+                ]
+          },
+          {"prop-name" : "SVG в HTML",
+              "browsers": [
+                {"browser-name": "Opera Mini",
+                  "bug-desc": "не поддерживается"},
+                ]
+          },
+          {"prop-name" : "SVG в background",
+              "browsers": [
+                {"browser-name": "Opera 12",
+                  "bug-desc": "размывается при растягивании"},
+                ]
+          }
+    ]
 };
+
+
+// var props = {
+//     gradient: {
+//         "repeat": {
+//             "firefox": "doesn't work repeat:reflect",
+//             "safari": "doesn't work repeat:reflect and repeat:repeat"
+//         }
+//     },
+//     "animation": {
+//         "values"
+
+//     }
+// };
+
+
+// "css-animation": {
+        //     "firefox": "doesn't work inside use",
+        //     "safari": "sometext"
+        // },
+        // "SMIL-animation": {
+        //     "ie8": "doesn't work inside use",
+        //     "ie7": "sometext"
+        // }

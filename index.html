@@ -7,19 +7,26 @@
 </head>
 <body>
   <script id="template--list" type="x-tmpl-mustache">
-  <dt class="prop-name">{{prop-name}}</dt>
-    <dd class="prop-value">
-        {{prop-value}}
-        <dl class="browsers-list">
-          <dt class="browser-name">
-              {{browser-name}}
-           </dt>
-          <dd class="browser-bug">
-              {{browser-bug}}
-          </dd>
-        </dl>
-    </dd>
+
+    {{#props}}
+        <dt class="prop-name">{{prop-name}}</dt>
+        {{#browsers}}
+            <dd class="browser-bug">
+                {{browser-name}}
+                {{&bug-desc}}
+            </dd>
+         {{/browsers}}
+    {{/props}}
+
 </script>
+<!-- <dl class="browsers-list">
+            <dt class="browser-name">
+                {{browser-name}}
+             </dt>
+            <dd class="browser-bug">
+                {{browser-bug}}
+            </dd>
+          </dl> -->
 
 
 
