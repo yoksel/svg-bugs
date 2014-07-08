@@ -12,10 +12,10 @@
         <dt class="prop-name">{{prop-name}}</dt>
         {{#browsers}}
             <dd class="browser-bug">
-                {{browser-name}}
+                <span class="browser {{browser-id}}" title="{{browser-name}}"></span>
                 {{&bug-desc}}
             </dd>
-         {{/browsers}}
+        {{/browsers}}
     {{/props}}
 
 </script>
