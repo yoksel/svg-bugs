@@ -1,1 +1,1 @@
-Presentation
+Try to collect known SVG bugs in one page: http://yoksel.github.io/svg-bugs/
