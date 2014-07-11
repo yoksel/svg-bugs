@@ -1,10 +1,14 @@
 var items = {
     "props": [{
-         "prop-name": "gradients",
+        "prop-name": "gradients",
         "browsers": [{
             "browser-id": "firefox",
             "browser-name": "Firefox",
             "bug-desc": "не работает <code>spreadMethod: reflect</code>"
+            }, {
+            "browser-id": "firefox",
+            "browser-name": "Firefox",
+            "bug-desc": "проблема с градиентами при разных gradients-units"
             }, {
             "browser-id": "safari",
             "browser-name": "Safari",
@@ -41,6 +45,14 @@ var items = {
             "browser-id": "opera-old opera-12",
             "browser-name": "Opera 12",
             "bug-desc": "размывается при растягивании"
-        }, ]
-    }]
+            } ]
+        }, {
+        "prop-name": "stroke",
+        "browsers": [{
+            "browser-id": "chrome",
+            "browser-name": "Chrome",
+            "bug-desc": "двойная рамка у текста при больших размерах шрифта"
+            } ]
+        }
+    ]
 };
